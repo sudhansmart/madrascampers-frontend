@@ -17,7 +17,7 @@ const TableComponent = ({setTotalbookings}) => {
  
   const fetchDataFromServer = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/book/data');
+      const response = await axios.get('https://madrascampers.onrender.com/book/data');
       
       if (response.status === 200) { 
         setTableData(response.data);

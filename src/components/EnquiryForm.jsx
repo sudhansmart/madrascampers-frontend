@@ -30,7 +30,7 @@ function EnquiryForm() {
     const handleOnSubmit = async (e)=>{
       e.preventDefault();
       try {
-        const response = await axios.post("http://localhost:5000/enquiry/add",formData);
+        const response = await axios.post("https://madrascampers.onrender.com/enquiry/add",formData);
        console.log("enquiry :",response)
        if(response.data === true){
         setShow(true)

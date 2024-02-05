@@ -7,7 +7,6 @@ import Destination from './components/Destination';
 import { BrowserRouter as Router,Routes,Route,Navigate} from 'react-router-dom';
 import ContactUs from './components/ContactUs';
 import TrekDetails from './components/TrekDetails';
-import BookingPage from './components/BookingPage';
 import AdminDashboard from './components/AdminDashboard';
 import PaymentPage from './components/PaymentPage';
 import NewsLetterList from './components/NewsLetterList';
@@ -30,7 +29,7 @@ function App() {
   return (
     <>
     <Router>
-      {/* {userloggedin?<FeedbackForm/> : " "} */}
+      {userloggedin?<FeedbackForm/> : " "}
         {!adminLoggedIn? <NavBar showEditModal={showEditModal}
                   setShowEditModal={setShowEditModal}
                   userloggedin={userloggedin}

@@ -58,7 +58,7 @@ function BookingPage() {
       setGuestsError(true);
     } else {
       setGuestsError(false);
-      const response = await axios.post ('http://localhost:5000/book/addbooking',formData)
+      const response = await axios.post ('https://madrascampers.onrender.com/book/addbooking',formData)
       
       setGuests({
         tripId : response.data._id,

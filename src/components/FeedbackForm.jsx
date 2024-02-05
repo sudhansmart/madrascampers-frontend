@@ -26,7 +26,7 @@ function FeedbackForm() {
     const handleOnSubmit = async (e)=>{
       e.preventDefault();
       try {
-        const response = await axios.post("http://localhost:5000/feedback/add",formData);
+        const response = await axios.post("https://madrascampers.onrender.com/feedback/add",formData);
        console.log("Feedback :",formData)
       
        if(response.data === true){

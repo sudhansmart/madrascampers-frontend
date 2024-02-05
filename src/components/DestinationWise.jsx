@@ -16,8 +16,8 @@ const DestinationWise = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://api.example.com/destination-wise-data');
-        const data = await response.json();
+        // const response = await fetch('https://api.example.com/destination-wise-data');
+        // const data = await response.json();
         setDestinationData(data);
       } catch (error) {
         console.error('Error fetching data:', error);

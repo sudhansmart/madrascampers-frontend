@@ -51,7 +51,7 @@ function NavBar({setUserloggedin,setShowEditModal,showEditModal,userloggedin,set
   };
 
   const handleSignUpSubmit = (data) => {
-     axios.post('http://localhost:5000/signin/verify',data)
+     axios.post('https://madrascampers.onrender.com/signin/verify',data)
      .then(response => {
       console.log('Registration successful:', response.data);
       if (response.data === true) {
@@ -81,7 +81,7 @@ function NavBar({setUserloggedin,setShowEditModal,showEditModal,userloggedin,set
   };
  const handleloginSubmit = async(data)=>{
    try {
-      const response = await axios.post('http://localhost:5000/admin/login',data);
+      const response = await axios.post('https://madrascampers.onrender.com/admin/login',data);
       console.log("login data :",response.data)
       if(response.data.role === 'admin'){
         localStorage.setItem('adminName', response.data.name.toString());
@@ -97,7 +97,7 @@ function NavBar({setUserloggedin,setShowEditModal,showEditModal,userloggedin,set
 
   const handleOtpVerification = async (data) => {
     try {
-      const response = await axios.post('http://localhost:5000/signin/verifyotp', data);
+      const response = await axios.post('https://madrascampers.onrender.com/signin/verifyotp', data);
        console.log(response.data)
      
       if (response.status === 202) {

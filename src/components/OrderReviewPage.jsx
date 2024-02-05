@@ -28,7 +28,7 @@ const OrderReviewPage = ({ guests}) => {
   const handlePlaceOrder = async (e)=>{
       e.preventDefault();
      
-      const response = await axios.post("http://localhost:5000/book/confirmbooking",formData)
+      const response = await axios.post("https://madrascampers.onrender.com/book/confirmbooking",formData)
       console.log("summary :",response)
       if(response.status === 201){
         setShowfinal(true)

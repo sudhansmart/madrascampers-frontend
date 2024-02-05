@@ -17,7 +17,7 @@ const EnquiryTable = ({setTotalEnquiries}) => {
  
   const fetchDataFromServer = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/enquiry/data');
+      const response = await axios.get('https://madrascampers.onrender.com/enquiry/data');
       if (response.status === 200) { 
         setTableData(response.data);
          setTotalEnquiries((response.data).length)

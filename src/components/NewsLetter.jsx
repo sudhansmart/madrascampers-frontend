@@ -17,7 +17,7 @@ function NewsLetter() {
     const handleSubmit=(e)=>{
         e.preventDefault();
         try {
-            const response = axios.post('http://localhost:5000/newsletter/add',formData)
+            const response = axios.post('https://madrascampers.onrender.com/newsletter/add',formData)
             if(response.data === true ){
                 alert("Subscribed sucessfully")
             }
