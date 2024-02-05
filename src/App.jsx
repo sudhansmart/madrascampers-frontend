@@ -8,7 +8,6 @@ import { BrowserRouter as Router,Routes,Route,Navigate} from 'react-router-dom';
 import ContactUs from './components/ContactUs';
 import TrekDetails from './components/TrekDetails';
 import AdminDashboard from './components/AdminDashboard';
-import PaymentPage from './components/PaymentPage';
 import NewsLetterList from './components/NewsLetterList';
 import FeedbackForm from './components/FeedbackForm';
 
@@ -45,8 +44,6 @@ function App() {
         <Route path='/jawadhu' element={<TrekDetails showEditModal={showEditModal}
                   setShowEditModal={setShowEditModal} userloggedin={userloggedin}/>}/>
         <Route path='/newsletter' element={<NewsLetterList/>}/>
-        
-        <Route path='/paydev' element={<PaymentPage/>}/> 
       </Routes>
     </Router>
      
