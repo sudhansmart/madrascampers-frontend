@@ -60,7 +60,7 @@ function EnquiryForm() {
     <>
     <div className="wave-container">
          <div className='wave-content'>
-            <h3>Connect With <span style={{color:'green'}}>Nature</span>  <br/>Through <span style={{color:'gray'}}>Adventure</span></h3>
+            <h3>Connect With <span style={{color:'#abc638'}}>Nature</span>  <br/>Through <span style={{color:'gray'}}>Adventure</span></h3>
          </div>
          {show? <section className="login-main-wrapper">
       <div className="main-container">

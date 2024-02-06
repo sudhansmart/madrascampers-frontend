@@ -120,7 +120,7 @@ function NavBar({setUserloggedin,setShowEditModal,showEditModal,userloggedin,set
     transition: 'top 0.3s',
     top: isVisible ? '0' : '-100px',
     backgroundColor: isVisible ? 'black' : 'transparent',
-    borderRadius: '10px',
+    // borderRadius: '10px',
   };
 
   return (

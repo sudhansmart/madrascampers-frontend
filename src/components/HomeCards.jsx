@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import img from '../assets/images/adventure.jpg';
+import img1 from '../assets/images/kodaikanal.jpg';
+import img2 from '../assets/images/ooty.jpg';
 import { useNavigate } from 'react-router-dom';
 
 function HomeCards() {
@@ -14,7 +16,7 @@ function HomeCards() {
       price: 2500
     },
     {
-      img: 'https://2.bp.blogspot.com/-V3VUp2gcE4U/XCno8meDPsI/AAAAAAAAGGk/wxpqih4QxqsvYnMjPDxKqenFt61sW6NbQCLcBGAs/s1600/javadi%2Bhills%2B01.JPG',
+      img:img1,
       name: 'Kodaikanal',
       location: 'Kodaikanal, Tamilnadu',
       description: '',
@@ -22,7 +24,7 @@ function HomeCards() {
       price: 5500
     },
     {
-      img: 'https://thiruvannamalai.in/wp-content/uploads/2019/06/jawadhu_hills_kodai_festival_tiruvannamalai_2019_pic_img0007.jpg',
+      img: img2,
       name: 'Ooty',
       location: 'Ooty, Tamilnadu',
       description: '',
@@ -34,7 +36,7 @@ function HomeCards() {
   return (
     <div  className='homecards container-fluid mt-2  d-flex flex-wrap justify-content-center align-items-center' >
       {content.map((data, index) => (
-        <div className="col-md-4 mb-4" key={index}>
+        <div className="col-md-4 " key={index}>
           <div className="position-relative p-5">
             <img
               src={data.img}

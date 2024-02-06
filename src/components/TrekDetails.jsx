@@ -22,7 +22,7 @@ import { Image } from 'react-bootstrap';
 import TabDetails from './TabDetails';
 import Footer from './Footer';
 import BookingPage from './BookingPage';
-import PaymentPage from './PaymentPage';
+
 
 
 function TrekDetails({userloggedin,setShowEditModal}) {
@@ -51,7 +51,7 @@ function TrekDetails({userloggedin,setShowEditModal}) {
     
   const handlebook =()=>{
     setShowEditModal(true);
-      console.log("handle book excuted")
+      console.log("handle book excuted")  
   }   
   return (
     <> 
@@ -114,7 +114,7 @@ function TrekDetails({userloggedin,setShowEditModal}) {
          </div>
             <hr/>
          <div>
-            {userloggedin? <BookingPage/>: <div className="box-1">
+            {userloggedin? <BookingPage/>: <div className="box-1 mb-3">
                                             <div className="btn-book btn-one" onClick={handlebook}>
                                               <span >BOOK NOW</span>
                                              </div>
@@ -124,7 +124,7 @@ function TrekDetails({userloggedin,setShowEditModal}) {
        
             
     </div>
-    <PaymentPage/>
+   
    <Footer/>
     </>
   )

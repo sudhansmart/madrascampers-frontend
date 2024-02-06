@@ -48,7 +48,7 @@ function Footer() {
           </Navbar.Brand>
           <p style={{color:'white'}}>Promoting adventure, cosmic exploration,<br/> fostering nature's balance, pursuing knowledge,<br/> and advocating for a sustainable future for all.</p>
         </div>
-      <div className="footer-company">
+      <div className="footer-company mt-3">
         <h4 className='footer-subhead'>COMPANY</h4>
         <ul>
           <NavLink>About us</NavLink>
@@ -73,7 +73,35 @@ function Footer() {
          
         </ul>
       </div>
-      <div className="footer-follow">
+     
+      <div className="footer-contact text-center">
+        <h4 className='footer-subhead'>CONTACT US</h4>
+        <div className="address-line d-flex">
+          
+            <div className="contact-info">
+              <div className="contact-info-title"> <FontAwesomeIcon icon={faPhone} className="icon-footer"/> Phone</div>
+              <div><span style={{color:'white'}}>+91 9677716818 <br/>+91 9841431413</span></div>
+            </div>
+          </div>
+          <div className="address-line d-flex">
+          
+            <div className="contact-info">
+              <div className="contact-info-title"><FontAwesomeIcon icon={faEnvelope} className="icon-footer"/> Email</div>
+              <div style={{color:'white'}}>contact@madrascampers.com</div>
+            </div>
+          </div>
+        <div className="address-line d-flex">
+           
+            <div className="contact-info">
+              <div className="contact-info-title">  <FontAwesomeIcon icon={faMapLocationDot} className="icon-footer" /> Address</div>
+              <div style={{color:'white'}}>12th block,Door No -TH 174,</div>
+              <div style={{color:'white'}}>Jains Apartment Road,<br/>Madambakkam,Rajakilpakkam,</div>
+              <div style={{color:'white'}}>Chennai-600073, Tamilnadu.</div>
+              
+            </div>
+          </div>
+      </div>
+      <div className="footer-follow mt-4 mb-4">
         <h4 className='footer-subhead'>FOLLOW US</h4>
         <div className="social-icons">
         <a to="#face"  >
@@ -91,34 +119,8 @@ function Footer() {
          
         </div>
       </div>
-      <div className="footer-contact">
-        <h4 className='footer-subhead'>CONTACT US</h4>
-        <div className="address-line d-flex">
-          <FontAwesomeIcon icon={faPhone} className="icon-footer"/>
-            <div className="contact-info">
-              <div className="contact-info-title">Phone</div>
-              <div><span style={{color:'white'}}>+91 9677716818 <br/>+91 9841431413</span></div>
-            </div>
-          </div>
-          <div className="address-line d-flex">
-          <FontAwesomeIcon icon={faEnvelope} className="icon-footer"/>
-            <div className="contact-info">
-              <div className="contact-info-title">Email</div>
-              <div style={{color:'white'}}>contact@madrascampers.com</div>
-            </div>
-          </div>
-        <div className="address-line d-flex">
-            <FontAwesomeIcon icon={faMapLocationDot} className="icon-footer" />
-            <div className="contact-info">
-              <div className="contact-info-title">Address</div>
-              <div style={{color:'white'}}>12th block,Door No -TH 174,</div>
-              <div style={{color:'white'}}>Jains Apartment Road,<br/>Madambakkam,Rajakilpakkam,</div>
-              <div style={{color:'white'}}>Chennai-600073, Tamilnadu.</div>
-              
-            </div>
-          </div>
       </div>
-      </div>
+      
       <div className="footer-info">
         <p>© 2023 Madras Campers. All rights reserved.</p>  
       </div>

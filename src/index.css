@@ -190,11 +190,11 @@ body{
 @media (max-width: 768px) {
   .slide {
     margin-top: 23%;
-      height: 300px; /* Adjust height for smaller screens */
+      height: 480px; /* Adjust height for smaller screens */
   }
 
   .slide-Title {
-      font-size: 24px; /* Adjust font size for smaller screens */
+      font-size: xxx-large; /* Adjust font size for smaller screens */
   }
 
   .slidecontent {
@@ -271,7 +271,7 @@ body{
   }
 
   .welcomenote p {
-    font-size: 2vw; /* Adjust font size for smaller screens */
+    font-size: 4vw; /* Adjust font size for smaller screens */
   }
 }
 /* CSS for Home-Cards */
@@ -393,6 +393,8 @@ body{
 
   .about-photo img {
     max-width: 100%; /* Adjust photo width for smaller screens */
+    box-shadow: none;
+    border-radius: 0 0 0 0 ;
   }
 }
 /* Footer.css */
@@ -400,7 +402,7 @@ body{
 .footer-container {
   display: flex;
   flex-direction: column;
-  /* flex-wrap: wrap;*/
+  flex-wrap: wrap;
   justify-content: space-between; 
   padding: 20px; 
   background-color: #1c1c1d;
@@ -438,8 +440,9 @@ body{
 	background-color: white;
   color: #333f21;
 	border-radius: 30px;
-	padding: 10px;
+	padding: 2px;
 	vertical-align: top;
+  margin-right: 5px;
 }
 .footer-contact p {
   margin: 0;
@@ -457,6 +460,9 @@ body{
   .footer-column {
     max-width: 100%;
     margin-bottom: 20px;
+  }
+  .address-line{
+    justify-content: center;
   }
 }
 /* Css For Destination */
@@ -681,19 +687,19 @@ body{
 @media (max-width: 768px) {
   .trekdetails-carousal {
     flex-direction: row;
-   
+    height: 70%;
   }
   .carousal-image {
     width: 100%;
-    height: 500px;
-    object-fit: cover;
+    height: auto;
+    /* object-fit: cover; */
   }
   .trek-align-content{
     display: flex;
     flex-direction: column;
   }
   .carousal-main{
-    margin: 50px 0px ;
+    margin: 70px 0px ;
    height: 300px ;
     /*  width:100%;
     box-shadow : 12px 11px 10px rgb(0 0 0 / 39%); */
@@ -1067,7 +1073,7 @@ figure.snip1157 .author h5 span {
   left: -70px;
   top: 70px;
   height: 45%;
-  transform: rotate(+25deg);
+  transform: rotate(15deg);
   opacity: 0.8;
 }
 .hmecards2{
@@ -1167,7 +1173,7 @@ figure.snip1157 .author h5 span {
     width: 190px;
     left: 0%;
     top: 4%;
-    transform: rotate(25deg);
+    transform: rotate(15deg);
   }
   .hmecards2{
     z-index: 2;
@@ -1200,15 +1206,15 @@ figure.snip1157 .author h5 span {
     width: 185px;
     left: 5%;
     top: 15%;
-    transform: rotate(45deg);
+    transform: rotate(15deg);
   }
   .hmecards6{
     z-index: 1;
-    height: 210px;  
-    width: 220px;
+    height: 180px;  
+    width: 190px;
     left: 5%;
     top: 15%;
-    transform: rotate(0deg);
+    transform: rotate(-4deg);
   }
   .hmecards7{
     z-index: 7;
@@ -1225,7 +1231,7 @@ figure.snip1157 .author h5 span {
   width: 160px;
     left: 10%;
     top: 13%;
-    transform: rotate(-45deg);
+    transform: rotate(15deg);
   }
   .hmecards9{
     position:  relative;
@@ -1249,16 +1255,16 @@ figure.snip1157 .author h5 span {
   font-weight: 400;  
 }
 .newsform:before { content: ""; 
- background: rgba(255, 255, 0, 0.8);
+ background: #316950;
   display: block; 
-  width: 150px; 
-  height: 1000px;
+  width: 400px; 
+  height: 400px;
    position: absolute;
     z-index: -1;
     transform: rotate(45deg);
      -ms-transform: rotate(45deg);
      -webkit-transform: rotate(45deg); 
-     top: -500px; left: -60px;
+     top: 33px; left: 0px;
    }
 .newsform { position: relative;
   margin: 50px auto 0;
@@ -1279,7 +1285,8 @@ figure.snip1157 .author h5 span {
             -o-transition: all 200ms ease; 
             transition: all 200ms ease; 
            }
-.news-email:hover { width: 40%;
+.news-email:hover { width: 41%;
+  color: aliceblue;
   -webkit-transition: all 200ms ease; 
   -moz-transition: all 200ms ease;
    -ms-transition: all 200ms ease;
@@ -1327,7 +1334,28 @@ background-position:right bottom;
 transition: all 200ms ease;
 }  
 @media (max-width: 768px) {
-
+ 
+ 
+  .newsform:before { content: ""; 
+    background: #316950;
+     display: block; 
+     width: 300px; 
+     height: 300px;
+      position: absolute;
+       z-index: -1;
+       transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg); 
+        top: 33px; left: 0px;
+      }
+      .news-email:hover { width: 41%;
+        color: rgb(26, 52, 52);
+        -webkit-transition: all 200ms ease; 
+        -moz-transition: all 200ms ease;
+         -ms-transition: all 200ms ease;
+      -o-transition: all 200ms ease;
+      transition: all 200ms ease;
+      }
   .newsform { position: relative;
     margin: 50px auto ;
      width: auto;
@@ -1343,7 +1371,8 @@ transition: all 200ms ease;
      font-weight: 400;
       letter-spacing: 2px;
     width: 150px;
-    height: 35px;
+    height: auto;
+    padding: 20px;
   }
 }
 
@@ -1353,7 +1382,7 @@ transition: all 200ms ease;
    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-  background-color: #fdfd31;
+  background-color: #386931;
 
   overflow: hidden;
 }
@@ -1840,12 +1869,12 @@ width: 32rem;
   }
 }
 .box-1 {
-  height: 10%;
-  width: 120%; 
+  height: auto;
+  width: 100%; 
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2%;
+  padding: 5%;
 }
 .box-1 { background-color: #FF6766; }
 
