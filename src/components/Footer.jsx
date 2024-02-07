@@ -42,28 +42,28 @@ function Footer() {
     <>
     <footer className="footer-container">
       <div className='footer-content'>
-        <div>
+        <div className='footer-brand'>
         <Navbar.Brand   href="#home">
             <Image src={logo} className='logo'/> <br/> <span >Madras Campers</span> 
           </Navbar.Brand>
-          <p style={{color:'white'}}>Promoting adventure, cosmic exploration,<br/> fostering nature's balance, pursuing knowledge,<br/> and advocating for a sustainable future for all.</p>
+          <p style={{color:'white'}}> Promoting  adventure, cosmic  exploration, fostering <br/>nature's balance, pursuing knowledge, and advocating<br/>  for a sustainable future for all.</p>
         </div>
       <div className="footer-company mt-3">
         <h4 className='footer-subhead'>COMPANY</h4>
-        <ul>
+       
           <NavLink>About us</NavLink>
           <NavLink>Blogs</NavLink>
           <NavLink>Events</NavLink>
           <NavLink>Careers</NavLink>
           <NavLink>Frequently Asked Questions</NavLink>
           
-        </ul>
+       
         
       </div>
    
-      <div className="footer-camps">
+      <div className="footer-camps mt-3">
         <h4 className='footer-subhead'>Terms & Conditions</h4>
-        <ul>
+      
           <NavLink onClick={()=>openModal("terms")}>Terms & Conditions</NavLink>
         <NavLink onClick={()=>openModal("refund")}>Refund Policy</NavLink>
         <NavLink onClick={()=>openModal("cancel")}>Cancellation Policy</NavLink>
@@ -71,29 +71,28 @@ function Footer() {
         <NavLink></NavLink>
           
          
-        </ul>
+       
       </div>
      
-      <div className="footer-contact text-center">
-        <h4 className='footer-subhead'>CONTACT US</h4>
-        <div className="address-line d-flex">
-          
-            <div className="contact-info">
-              <div className="contact-info-title"> <FontAwesomeIcon icon={faPhone} className="icon-footer"/> Phone</div>
-              <div><span style={{color:'white'}}>+91 9677716818 <br/>+91 9841431413</span></div>
+      <div className="footer-contact text-center mt-3">
+        <h4 className='footer-subhead '>CONTACT US</h4>
+        <div className="footer-addressline d-flex justify-content-center">         
+            <div className="contact-info text-center">
+              <div className="footercontact-info-title mb-2 "> <FontAwesomeIcon icon={faPhone} className="icon-footer"/> Phone</div>
+             <span  style={{color:'white'}}>+91 9677716818 <br/>+91 9841431413</span>
             </div>
           </div>
-          <div className="address-line d-flex">
+          <div className="footer-addressline d-flex">
           
             <div className="contact-info">
-              <div className="contact-info-title"><FontAwesomeIcon icon={faEnvelope} className="icon-footer"/> Email</div>
+              <div className="contact-info-title mt-2 mb-1"><FontAwesomeIcon icon={faEnvelope} className="icon-footer"/> Email</div>
               <div style={{color:'white'}}>contact@madrascampers.com</div>
             </div>
           </div>
-        <div className="address-line d-flex">
+        <div className="footer-addressline d-flex">
            
             <div className="contact-info">
-              <div className="contact-info-title">  <FontAwesomeIcon icon={faMapLocationDot} className="icon-footer" /> Address</div>
+              <div className="contact-info-title mt-2 mb-1">  <FontAwesomeIcon icon={faMapLocationDot} className="icon-footer" /> Address</div>
               <div style={{color:'white'}}>12th block,Door No -TH 174,</div>
               <div style={{color:'white'}}>Jains Apartment Road,<br/>Madambakkam,Rajakilpakkam,</div>
               <div style={{color:'white'}}>Chennai-600073, Tamilnadu.</div>
@@ -101,7 +100,7 @@ function Footer() {
             </div>
           </div>
       </div>
-      <div className="footer-follow mt-4 mb-4">
+      <div className="footer-follow mt-3 mb-4">
         <h4 className='footer-subhead'>FOLLOW US</h4>
         <div className="social-icons">
         <a to="#face"  >

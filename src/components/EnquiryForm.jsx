@@ -60,7 +60,7 @@ function EnquiryForm() {
     <>
     <div className="wave-container">
          <div className='wave-content'>
-            <h3>Connect With <span style={{color:'#abc638'}}>Nature</span>  <br/>Through <span style={{color:'gray'}}>Adventure</span></h3>
+            <h3>Connect With <span style={{color:'#EE4E34'}}>Nature</span>  <br/>Through <span style={{color:'#EE4E34'}}>Adventure</span></h3>
          </div>
          {show? <section className="login-main-wrapper">
       <div className="main-container">
@@ -77,7 +77,7 @@ function EnquiryForm() {
         <div className="clr"></div>
       </div>
     </section>:<div className='wave-form'>
-            <h3 className='mb-3'>Have a Query? Don't Worry!!<br/>Write to Us...<br/>We Will Assist you...</h3>
+            <h3 className='mb-3 text-white'>Have a Query? Don't Worry!!<br/>Write to Us...<br/>We Will Assist you...</h3>
             <Form onSubmit={handleOnSubmit}>
             <FloatingLabel
              controlId="floatingInput1"

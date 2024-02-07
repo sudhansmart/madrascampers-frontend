@@ -13,6 +13,8 @@ import EnquiryForm from './EnquiryForm'
 import CallToAction from './CallToAction'
 import InfoCard from './InfoCard'
 import HomeCheckAvail from './HomeCheckAvail'
+import HomeNewSlide from './HomeNewSlide'
+
 
 
 
@@ -28,10 +30,11 @@ function HomePage() {
          <Slide/>
          <WelcomeNote/>
          <HomeCheckAvail/>
-         <HomeCards/>
+         <HomeNewSlide/>
+         {/* <HomeCards/> */}
          <Testimonials/>
          <About/>
-         <HomePhotoCard/>
+         {/* <HomePhotoCard/> */}
          <EnquiryForm/>
          <NewsLetter/>
          <InfoCard/>

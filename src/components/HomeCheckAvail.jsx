@@ -60,12 +60,18 @@ function HomeCheckAvail() {
       setTotalGuests('');
     }
   };
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Optional smooth scrolling
+    });
+  };
 
   return (
    <>
     <div className='home-checkavail'>
        <div  className='home-checkavail-content' ><h2 className='home-checkavail-title' >Escape, Explore, Enjoy</h2>  
-        <button className='hme-check-button' onClick={()=>navigate('/jawadhu')}><span>Book Now !</span></button>
+        <button className='hme-check-button' onClick={()=>navigate('/jawadhu')}><span onClick={scrollToTop}>Book Now !</span></button>
            <p className='hme-check-para'>We'll Show You the Way</p>
        </div>
       <Container className='home-checkavail-fields'>

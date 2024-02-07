@@ -407,6 +407,11 @@ body{
   padding: 20px; 
   background-color: #1c1c1d;
 }
+
+.footercontact-info-title{
+  color: #01bdd4;
+
+}
 .footer-subhead{
   color: #8d7f7f;
 }
@@ -441,7 +446,7 @@ body{
   color: #333f21;
 	border-radius: 30px;
 	padding: 2px;
-	vertical-align: top;
+	vertical-align: bottom;
   margin-right: 5px;
 }
 .footer-contact p {
@@ -457,6 +462,17 @@ body{
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    padding: 20px; 
+    background-color: #1c1c1d;
+  }
+  .footer-company{
+    text-align: center;
+  }
   .footer-column {
     max-width: 100%;
     margin-bottom: 20px;
@@ -950,7 +966,7 @@ body{
   display: flex;
   background-image: url(./assets/images/bg-about.jpg) !important;
   background-repeat: no-repeat !important;
-  background-size: contain !important;
+  background-size: cover !important;
   flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
   justify-content: space-around;
 }
@@ -1335,7 +1351,9 @@ transition: all 200ms ease;
 }  
 @media (max-width: 768px) {
  
- 
+  .news-email {
+    font-size: 25px;
+  }
   .newsform:before { content: ""; 
     background: #316950;
      display: block; 
@@ -1346,7 +1364,7 @@ transition: all 200ms ease;
        transform: rotate(45deg);
         -ms-transform: rotate(45deg);
         -webkit-transform: rotate(45deg); 
-        top: 33px; left: 0px;
+        top: 0px; left: 0px;
       }
       .news-email:hover { width: 41%;
         color: rgb(26, 52, 52);
@@ -1382,7 +1400,7 @@ transition: all 200ms ease;
    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-  background-color: #386931;
+   background-image: url('./assets/images/enquiry-bg.jpg');
 
   overflow: hidden;
 }
@@ -1394,13 +1412,14 @@ transition: all 200ms ease;
 .wave-content h3{
   font-size:100px;
   font-weight: 600;
+  color: #FCEDDA;
 }
 .wave-form{
   width: 550px;
-  background: aliceblue;
+  background: #676f7645;
   padding: 50px;
   margin: 20px;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   box-shadow : 12px 11px 10px rgb(0 0 0 / 39%);
 }
 @media (max-width: 768px) {
@@ -2091,10 +2110,15 @@ width: 32rem;
 }
 
 
+/* Slider Css */
 
+.HomeNewSlide{
+  background-color: #282c34;
+  background-size: contain;
+  display: inline-block;
+  width: 400px;
 
-
-
+}
 
 
 

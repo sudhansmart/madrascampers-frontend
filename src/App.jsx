@@ -10,6 +10,7 @@ import TrekDetails from './components/TrekDetails';
 import AdminDashboard from './components/AdminDashboard';
 import NewsLetterList from './components/NewsLetterList';
 import FeedbackForm from './components/FeedbackForm';
+import HomeNewSlide from './components/HomeNewSlide';
 
 
 
@@ -44,6 +45,7 @@ function App() {
         <Route path='/jawadhu' element={<TrekDetails showEditModal={showEditModal}
                   setShowEditModal={setShowEditModal} userloggedin={userloggedin}/>}/>
         <Route path='/newsletter' element={<NewsLetterList/>}/>
+        <Route path='/dev' element={<HomeNewSlide/>}/>
       </Routes>
     </Router>
      
