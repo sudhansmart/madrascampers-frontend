@@ -1,57 +1,98 @@
-import React, { useState, useEffect } from 'react';
-import SimpleImageSlider from "react-simple-image-slider";
-import { Container } from 'react-bootstrap';
-import img1 from '../assets/images/adventure.jpg'
+import { faArrowAltCircleLeft } from '@fortawesome/free-regular-svg-icons';
+import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from 'react';
+import { useEffect } from 'react';
+import img1 from '../assets/images/newslide1.jpg'
+import img2 from '../assets/images/ooty.jpg'
+import img3 from '../assets/images/kodaikanal.jpg'
+// import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
-function HomeNewSlide() {
-    const images2 = [
+const HomeNewSlide = () => {
+    const slides = [
         {
-            url: img1,
+          image: img1,
+            text:  "JAWADHU HILLS",
+            additional:"Explore The Bliss"
         },
         {
-            url: "https://cdn.shopclues.com/images/banners/2023/Mar/25/HB2_Refurbished_Web_SYM_25Mar23.jpg"
+          image:img2,
+             
+          text:  "OOTY ",
+          additional: "Coming soon!!" ,
         },
         {
-            url: "https://cdn.shopclues.com/images/banners/2023/Mar/25/HB3_Trueware_Web_SYM_25Mar23.jpg"
+          image:img3,
+            text:  "KODAIKANAL ",
+            additional: "Coming soon!!" ,
         },
-        {
-            url: "https://cdn.shopclues.com/images/banners/2023/Mar/31/HB4_JDD_Web_Esha_31Mar23.jpg"
-        },
-        {
-            url: "https://cdn.shopclues.com/images/banners/2023/Mar/01/Intel_Web_12thGenGaming.jpg"
-        }
-    ];
+        // {
+        //   image:
+        //     'https://images.unsplash.com/photo-1475189778702-5ec9941484ae?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1351&q=80',
+        //     text:  "Sample -3"
+        // },
+        // {
+        //   image:
+        //     'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80',
+        //     text:  "Sample -4"
+        // }
+      ];
+      
+  const [current, setCurrent] = useState(0);
+  const length = slides.length;
 
-    const [sliderDimensions, setSliderDimensions] = useState({ width: 0, height: 0 });
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000); // Auto slide every 5 seconds
 
-    useEffect(() => {
-        const handleResize = () => {
-            setSliderDimensions({
-                width: window.innerWidth > 768 ? 1519 : window.innerWidth,
-                height: window.innerWidth > 768 ? 600 : 300
-            });
-        };
+    return () => clearInterval(interval);
+  }, [current]);
+  
 
-        handleResize();
+  
 
-        window.addEventListener('resize', handleResize);
+  const nextSlide = () => {
+    setCurrent(current === length - 1 ? 0 : current + 1);
+  };
 
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
+  const prevSlide = () => {
+    setCurrent(current === 0 ? length - 1 : current - 1);
+  };
 
-    return (
-        <Container fluid>
-            <div className="HomeNewSlide">
-                <SimpleImageSlider  style={{backgroundRepeat:'no-repeat'}}
-                    width={sliderDimensions.width}
-                    height={sliderDimensions.height}
-                    images={images2}
-                    showBullets={true}
-                    showNavs={false}
-                />
-            </div>
-        </Container>
-    );
-}
+  if (!Array.isArray(slides) || slides.length <= 0) {
+    return null;
+  }
+
+  return (
+    <div className='newslider-main'>
+    <section className='new-slider'>
+      {/* <FaArrowAltCircleLeft className='left-arrow' onClick={prevSlide} /> 
+      <FaArrowAltCircleRight className='right-arrow' onClick={nextSlide} /> */}
+      {/* <FontAwesomeIcon icon={faArrowAltCircleLeft} className='left-arrow' onClick={prevSlide}/>
+      <FontAwesomeIcon icon={faArrowAltCircleRight} className='right-arrow' onClick={nextSlide}/> */}
+      {slides.map((slide, index) => {
+        return (
+          <div
+            className={index === current ? 'new-slide active' : 'new-slide'}
+            key={index}
+          >
+            {index === current && (
+                <div>
+                     <img src={slide.image} alt='travel image' className='new-image' /> 
+                     <div className="newslider-text">{slide.text} <br/></div> 
+                     <div className="newslider-text2">{slide.additional}</div>
+                </div>
+             
+               
+            )}
+             
+          </div>
+        );
+      })}
+    </section>
+    </div>
+  );
+};
 
 export default HomeNewSlide;

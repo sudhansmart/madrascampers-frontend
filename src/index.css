@@ -1953,33 +1953,69 @@ width: 32rem;
   transform: scale(0.1, 1);
 }
 /* Css for Enquiry Form Submission */
-
-.thankyou-wrapper{
-
-  width: 550px;
+.thankyou-wrapper {
+  width: 90%; /* Adjusted width for mobile responsiveness */
+  max-width: 550px; /* Maximum width to maintain readability */
   background: aliceblue;
-  padding: 50px;
+  padding: 5%; /* Adjusted padding for mobile responsiveness */
   align-items: center;
-  height: 600px;
-  margin: 20px;
+  height: auto; /* Let the height adjust based on content */
+  margin: 20px auto; /* Center the element horizontally and add margin */
   border-radius: 30px;
-  box-shadow : 12px 11px 10px rgb(0 0 0 / 39%);
+  box-shadow: 12px 11px 10px rgb(0 0 0 / 39%);
 }
-.thankyou-wrapper h1{
-  font:100px Arial, Helvetica, sans-serif;
-  text-align:center;
-  color:#333333;
-  padding:0px 10px 10px;
+
+.thankyou-wrapper h1 {
+  font: 6vw Arial, Helvetica, sans-serif; /* Adjusted font size for mobile responsiveness */
+  text-align: center;
+  color: #333333;
+  padding: 0 10px 10px;
+  margin: 0; /* Remove default margin */
 }
-.thankyou-wrapper p{
-  font:26px Arial, Helvetica, sans-serif;
-  text-align:center;
-  color:#333333;
-  padding:5px 10px 10px;
+
+.thankyou-wrapper p {
+  font: 3vw Arial, Helvetica, sans-serif; /* Adjusted font size for mobile responsiveness */
+  text-align: center;
+  color: #333333;
+  padding: 5px 10px 10px;
+  margin: 0; /* Remove default margin */
 }
-.thankyou-wrapper img{
-  width: 350px;
- 
+
+.thankyou-wrapper img {
+  width: 100%; /* Make the image responsive */
+  max-width: 350px; /* Limit the maximum width */
+  display: block; /* Ensure the image is centered */
+  margin: 0 auto 20px; /* Center the image horizontally and add margin */
+}
+
+/* Media Query for Tablet */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .thankyou-wrapper {
+    width: 70%; /* Adjusted width for tablet */
+  }
+
+  .thankyou-wrapper h1 {
+    font-size: 5vw; /* Adjusted font size for tablet */
+  }
+
+  .thankyou-wrapper p {
+    font-size: 2.5vw; /* Adjusted font size for tablet */
+  }
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 767px) {
+  .thankyou-wrapper {
+    width: 80%; /* Adjusted width for mobile */
+  }
+
+  .thankyou-wrapper h1 {
+    font-size: 8vw; /* Adjusted font size for mobile */
+  }
+
+  .thankyou-wrapper p {
+    font-size: 4vw; /* Adjusted font size for mobile */
+  }
 }
 
 /* CSS for Orderplaced sucessfully */
@@ -2111,13 +2147,86 @@ width: 32rem;
 
 
 /* Slider Css */
+.newslider-main{
+  height: 600px;
+}
 
-.HomeNewSlide{
-  background-color: #282c34;
-  background-size: contain;
-  display: inline-block;
-  width: 400px;
+.new-slider {
+  position: relative;
+  height: 100%; /* Adjusted height to be dynamic based on content */
+  max-height: 600px; /* Maximum height to avoid overflow */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensure images don't overflow */
+}
 
+.new-image {
+  width: 100%; /* Make the image responsive */
+  max-width: 100%; /* Limit the maximum width */
+  height: auto; /* Let the height adjust accordingly */
+  border-radius: 10px;
+  position: relative; /* Ensure text is positioned relative to the image */
+}
+
+.newslider-text {
+  font-size: 5vw; /* Responsive font size based on viewport width */
+  color: aliceblue;
+  position: absolute;
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-0%, -0%); /* Center the text */
+  animation: newslider-text 4s ease; /* Apply the animation */
+}
+
+.newslider-text2 {
+  font-size: 3vw; /* Responsive font size based on viewport width */
+  color: aliceblue;
+  position: absolute;
+  top: 60%; 
+  color: red;
+  font-weight: 500;
+  left: 50%; 
+  transform: translate(-0%, -0%); /* Center the text */
+  animation: newslider-text 4s ease; /* Apply the animation */
+}
+@keyframes newslider-text {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.new-slide {
+  opacity: 0.5;
+  transition-duration: 3s; /* Adjusted duration for slower transition */
+}
+
+.new-slide.active {
+  opacity: 1;
+  transition-duration: 3s; /* Adjusted duration for slower transition */
+  transform: scale(1.08);
+}
+
+/* Media Query for mobile devices */
+@media only screen and (max-width: 600px) {
+  .newslider-main{
+    height: 300px;
+  }
+  .newslider-text {
+    font-size: 5vw; /* Adjusted font size for smaller screens */
+   
+    color: aliceblue;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(0%, 0%); /* Center the text */
+    animation: newslider-text 4s ease; /* Apply the animation */
+  }
 }
 
 

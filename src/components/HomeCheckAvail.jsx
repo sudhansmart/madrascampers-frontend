@@ -46,6 +46,7 @@ function HomeCheckAvail() {
       console.log('FormData : ', formData);
       if(formData.destination === 'Jawadhu'){
          navigate('/jawadhu')
+         scrollToTop()
       }
      
       setFormData({
